@@ -5,11 +5,11 @@ import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../../../constants/global';
 const styles = StyleSheet.create({
   container: {
     borderWidth: 1,
-    borderColor: colors.black,
+    borderColor: colors.darkAstro,
     borderRadius: 8,
     height: SCREEN_HEIGHT * 0.05,
     width: SCREEN_WIDTH * 0.75,
-    color: colors.black,
+    color: colors.purple,
   },
   error: {
     color: colors.red,

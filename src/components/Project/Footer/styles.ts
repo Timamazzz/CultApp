@@ -1,18 +1,21 @@
 import {StyleSheet} from 'react-native';
-import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../../../constants/global';
 import {colors} from '../../../constants/colors';
 
 const styles = StyleSheet.create({
   container: {
-    width: SCREEN_WIDTH * 0.75,
-    height: SCREEN_HEIGHT * 0.05,
-    borderRadius: 6,
-    backgroundColor: colors.black,
+    backgroundColor: colors.lightAstro,
+    height: '5%',
+    width: '100%',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    paddingHorizontal: '5%',
+    borderTopStartRadius: 8,
+    borderTopEndRadius: 8,
   },
-  text: {
+  urlText: {
     color: colors.purple,
   },
 });
+
 export default styles;

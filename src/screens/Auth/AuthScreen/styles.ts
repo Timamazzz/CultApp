@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {SCREEN_HEIGHT} from '../../../constants/global';
+import {colors} from '../../../constants/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -7,12 +8,16 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: colors.backAstro,
   },
   form: {
-    height: '20%',
+    height: '25%',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: colors.lightAstro,
+    padding: '5%',
+    borderRadius: 8,
   },
 });
 
