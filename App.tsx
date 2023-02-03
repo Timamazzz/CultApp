@@ -8,13 +8,26 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import CommonNavigator from './src/navigation/CommonNavigator/CommonNavigator';
+import NetInfo from '@react-native-community/netinfo';
+import ConnectScreen from './src/screens/Connect/ConnectScreen/ConnectScreen';
+
 const App = () => {
+  const [isInternetReachable, setIsInternetReachable] = useState(Boolean);
+  useEffect(() => {
+    const unsubscribe = NetInfo.addEventListener(state => {
+      return setIsInternetReachable(state.isInternetReachable);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
   return (
     <NavigationContainer>
-      <CommonNavigator />
+      {isInternetReachable ? <CommonNavigator /> : <ConnectScreen />}
     </NavigationContainer>
   );
 };
