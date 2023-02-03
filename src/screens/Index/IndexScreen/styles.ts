@@ -34,12 +34,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontStyle: 'italic',
   },
-  image: {
+  imageContainer: {
     width: '95%',
     height: '30%',
     borderRadius: 8,
     borderWidth: 1,
     borderColor: colors.purple,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    borderRadius: 8,
+  },
+  imageHD: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'contain',
+    zIndex: -1,
   },
   post: {
     width: '95%',
@@ -60,6 +72,12 @@ const styles = StyleSheet.create({
   },
   margin: {
     marginRight: 10,
+  },
+  closeImage: {
+    color: colors.purple,
+    fontSize: 50,
+    position: 'absolute',
+    alignSelf: 'flex-end',
   },
 });
 
